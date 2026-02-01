@@ -19,6 +19,8 @@
         a, button, .card-hover { cursor: pointer; }
         .scroll-reveal { opacity: 0; transform: translateY(50px); transition: opacity 0.8s ease, transform 0.8s ease; }
         .scroll-reveal.active { opacity: 1; transform: translateY(0); }
+        #mobileMenu { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+        #mobileMenu.open { max-height: 300px; }
     </style>
 </head>
 <body class="bg-zinc-950 text-gray-100">
@@ -30,7 +32,22 @@
         <div class="max-w-7xl mx-auto px-6 py-4">
             <div class="flex justify-between items-center">
                 <h1 class="text-2xl font-bold gradient-text">MP</h1>
-                <div class="space-x-8 text-sm font-medium">
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 text-sm font-medium">
+                    <a href="#about" class="hover:text-indigo-400 transition">About</a>
+                    <a href="#skills" class="hover:text-indigo-400 transition">Skills</a>
+                    <a href="#experience" class="hover:text-indigo-400 transition">Experience</a>
+                    <a href="#projects" class="hover:text-indigo-400 transition">Projects</a>
+                    <a href="#contact" class="hover:text-indigo-400 transition">Contact</a>
+                </div>
+                <!-- Mobile Menu Button -->
+                <button id="menuBtn" class="md:hidden text-2xl focus:outline-none">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="md:hidden">
+                <div class="flex flex-col space-y-4 pt-4 text-sm font-medium">
                     <a href="#about" class="hover:text-indigo-400 transition">About</a>
                     <a href="#skills" class="hover:text-indigo-400 transition">Skills</a>
                     <a href="#experience" class="hover:text-indigo-400 transition">Experience</a>
@@ -172,12 +189,12 @@
             <h2 class="text-5xl font-bold mb-12 text-center">Work <span class="highlight-text">Experience</span></h2>
             <div class="space-y-8">
                 <div class="bg-zinc-900 p-8 rounded-xl border-l-4 border-cyan-500 hover:bg-zinc-800 transition">
-                    <div class="flex justify-between items-start mb-4">
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4 gap-2">
                         <div>
                             <h3 class="text-2xl font-bold highlight-text">Full Stack Developer Intern</h3>
                             <p class="text-xl text-gray-300">Advance Web Software, Vadodara, India</p>
                         </div>
-                        <span class="text-gray-400">Dec 2024 - May 2025</span>
+                        <span class="text-gray-400 md:text-right whitespace-nowrap">Dec 2024 - May 2025</span>
                     </div>
                     <ul class="list-disc list-inside space-y-2 text-gray-300">
                         <li>Expanded loan management platform from India, UK, and USA to UAE and Egypt by introducing new loan types and optimizing 50+ APIs, increasing potential user base by 15%</li>
@@ -185,12 +202,12 @@
                     </ul>
                 </div>
                 <div class="bg-zinc-900 p-8 rounded-xl border-l-4 border-cyan-500 hover:bg-zinc-800 transition">
-                    <div class="flex justify-between items-start mb-4">
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4 gap-2">
                         <div>
                             <h3 class="text-2xl font-bold highlight-text">Web Design Intern</h3>
                             <p class="text-xl text-gray-300">Stypix Pvt. Ltd, Ahmedabad, India</p>
                         </div>
-                        <span class="text-gray-400">Jun 2024 - Aug 2024</span>
+                        <span class="text-gray-400 md:text-right whitespace-nowrap">Jun 2024 - Aug 2024</span>
                     </div>
                     <ul class="list-disc list-inside space-y-2 text-gray-300">
                         <li>Independently developed a responsive food delivery web application using ReactJS, Redux, and modern UI design principles</li>
@@ -198,12 +215,12 @@
                     </ul>
                 </div>
                 <div class="bg-zinc-900 p-8 rounded-xl border-l-4 border-cyan-500 hover:bg-zinc-800 transition">
-                    <div class="flex justify-between items-start mb-4">
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4 gap-2">
                         <div>
                             <h3 class="text-2xl font-bold highlight-text">Managing Director</h3>
                             <p class="text-xl text-gray-300">Computer Society of India, Nirma University</p>
                         </div>
-                        <span class="text-gray-400">Sep 2023 - Nov 2024</span>
+                        <span class="text-gray-400 md:text-right whitespace-nowrap">Sep 2023 - Nov 2024</span>
                     </div>
                     <ul class="list-disc list-inside space-y-2 text-gray-300">
                         <li>Led a team of 40+ members and directed 3 hackathons and 10+ expert events, engaging over 1000+ participants</li>
@@ -383,6 +400,25 @@
     </footer>
 
     <script>
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('open');
+            const icon = menuBtn.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('#mobileMenu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('open');
+                const icon = menuBtn.querySelector('i');
+                icon.classList.add('fa-bars');
+                icon.classList.remove('fa-times');
+            });
+        });
+
         // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
