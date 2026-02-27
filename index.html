@@ -1,32 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mulya Patel - Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
+        rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        body { font-family: 'Inter', sans-serif; }
-        h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; }
-        .gradient-text { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-        .highlight-text { color: #06b6d4; }
-        .card-hover { transition: all 0.3s ease; }
-        .card-hover:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(102, 126, 234, 0.1); }
-        a, button, .card-hover { cursor: pointer; }
-        .scroll-reveal { opacity: 0; transform: translateY(50px); transition: opacity 0.8s ease, transform 0.8s ease; }
-        .scroll-reveal.active { opacity: 1; transform: translateY(0); }
-        #mobileMenu { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
-        #mobileMenu.open { max-height: 300px; }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .highlight-text {
+            color: #06b6d4;
+        }
+
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(102, 126, 234, 0.1);
+        }
+
+        a,
+        button,
+        .card-hover {
+            cursor: pointer;
+        }
+
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .scroll-reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        #mobileMenu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        #mobileMenu.open {
+            max-height: 300px;
+        }
     </style>
 </head>
+
 <body class="bg-zinc-950 text-gray-100">
     <!-- Animated Background -->
     <canvas id="networkCanvas" class="fixed top-0 left-0 w-full h-full -z-10"></canvas>
-    
+
     <!-- Navigation -->
     <nav class="fixed w-full bg-zinc-900/80 backdrop-blur-lg border-b border-zinc-800 z-50">
         <div class="max-w-7xl mx-auto px-6 py-4">
@@ -64,24 +113,39 @@
     <section class="min-h-screen flex items-center justify-center pt-20 px-6">
         <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
             <div class="space-y-6">
-                <h2 class="text-6xl font-bold leading-tight">Hi, I'm <span class="highlight-text">Mulya Patel</span></h2>
+                <h2 class="text-6xl font-bold leading-tight">Hi, I'm <span class="highlight-text">Mulya Patel</span>
+                </h2>
                 <p class="text-3xl highlight-text font-semibold">Full Stack Developer & AI/ML Engineer</p>
-                <p class="text-xl text-gray-400 leading-relaxed">Master's in Computer Science student at NC State University passionate about Deep Learning, Data Science, and Software Engineering. Building scalable and user-centric solutions.</p>
+                <p class="text-xl text-gray-400 leading-relaxed">Master's in Computer Science student at NC State
+                    University passionate about Deep Learning, Data Science, and Software Engineering. Building scalable
+                    and user-centric solutions.</p>
                 <div class="flex space-x-4 pt-4">
-                    <a href="#contact" class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:shadow-lg hover:shadow-indigo-500/50 transition">Get In Touch</a>
-                    <a href="#projects" class="border-2 border-zinc-700 px-8 py-3 rounded-lg font-semibold hover:border-indigo-500 hover:text-indigo-400 transition">View Work</a>
+                    <a href="#contact"
+                        class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:shadow-lg hover:shadow-indigo-500/50 transition">Get
+                        In Touch</a>
+                    <a href="#projects"
+                        class="border-2 border-zinc-700 px-8 py-3 rounded-lg font-semibold hover:border-indigo-500 hover:text-indigo-400 transition">View
+                        Work</a>
                 </div>
                 <div class="flex space-x-6 text-2xl pt-4">
-                    <a href="https://github.com/MulyaP" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-400 transition"><i class="fab fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/mulya-patel-645069250/" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-400 transition"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://codeforces.com/profile/Mulya_patel" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-400 transition"><i class="fas fa-code"></i></a>
-                    <a href="mailto:patel.mulya@gmail.com" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-400 transition"><i class="fas fa-envelope"></i></a>
+                    <a href="https://github.com/MulyaP" target="_blank" rel="noopener noreferrer"
+                        class="hover:text-indigo-400 transition"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/mulya-patel-645069250/" target="_blank"
+                        rel="noopener noreferrer" class="hover:text-indigo-400 transition"><i
+                            class="fab fa-linkedin"></i></a>
+                    <a href="https://codeforces.com/profile/Mulya_patel" target="_blank" rel="noopener noreferrer"
+                        class="hover:text-indigo-400 transition"><i class="fas fa-code"></i></a>
+                    <a href="mailto:patel.mulya@gmail.com" target="_blank" rel="noopener noreferrer"
+                        class="hover:text-indigo-400 transition"><i class="fas fa-envelope"></i></a>
                 </div>
             </div>
             <div class="flex justify-center">
                 <div class="relative">
-                    <div class="absolute inset-0 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl blur-2xl opacity-20"></div>
-                    <img src="images/Profile_pic_1.jpeg" alt="Profile" class="relative rounded-2xl w-96 h-96 object-cover border-2 border-zinc-800 shadow-2xl">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl blur-2xl opacity-20">
+                    </div>
+                    <img src="images/Profile_pic_1.jpeg" alt="Profile"
+                        class="relative rounded-2xl w-96 h-96 object-cover border-2 border-zinc-800 shadow-2xl">
                 </div>
             </div>
         </div>
@@ -93,9 +157,14 @@
             <h2 class="text-5xl font-bold mb-12 text-center">About <span class="highlight-text">Me</span></h2>
             <div class="grid md:grid-cols-2 gap-12">
                 <div class="space-y-6 text-lg text-gray-300 leading-relaxed">
-                    <p>I'm a Master's student in Computer Science at North Carolina State University (CGPA: 4.0/4.0), with a Bachelor's degree from Nirma University, India (PPI: 8.4/10).</p>
-                    <p>My expertise spans Full Stack Development, Deep Learning, and AI/ML. I've worked on projects ranging from Agentic AI systems to audio processing models, achieving significant performance improvements and user engagement.</p>
-                    <p>As Managing Director of CSI at Nirma University, I led a team of 40+ members, organizing 3 hackathons and 10+ expert events with 1000+ participants. I'm passionate about building scalable solutions that make a real impact.</p>
+                    <p>I'm a Master's student in Computer Science at North Carolina State University (CGPA: 4.0/4.0),
+                        with a Bachelor's degree from Nirma University, India (PPI: 8.4/10).</p>
+                    <p>My expertise spans Full Stack Development, Deep Learning, and AI/ML. I've worked on projects
+                        ranging from Agentic AI systems to audio processing models, achieving significant performance
+                        improvements and user engagement.</p>
+                    <p>As Managing Director of CSI at Nirma University, I led a team of 40+ members, organizing 3
+                        hackathons and 10+ expert events with 1000+ participants. I'm passionate about building scalable
+                        solutions that make a real impact.</p>
                 </div>
                 <div class="grid grid-cols-2 gap-6">
                     <div class="bg-zinc-900 p-6 rounded-xl border border-zinc-800 card-hover">
@@ -129,25 +198,32 @@
                         <div>
                             <h3 class="text-2xl font-bold highlight-text">Master of Science in Computer Science</h3>
                             <p class="text-xl text-gray-300">North Carolina State University, Raleigh, NC</p>
-                            <p class="text-lg text-gray-400 mt-2">CGPA: <span class="highlight-text font-bold">4.0/4.0</span></p>
+                            <p class="text-lg text-gray-400 mt-2">CGPA: <span
+                                    class="highlight-text font-bold">4.0/4.0</span></p>
                         </div>
                         <span class="text-gray-400 md:text-right whitespace-nowrap">Aug 2025 - May 2027</span>
                     </div>
                     <ul class="list-disc list-inside space-y-2 text-gray-300">
-                        <li>Relevant Coursework: Automated Learning and Data Analysis, Software Engineering, Design and Analysis of Algorithms, Software Security, Advanced Topics in Machine Learning, Neural Networks</li>
+                        <li>Relevant Coursework: Automated Learning and Data Analysis, Software Engineering, Design and
+                            Analysis of Algorithms, Software Security, Advanced Topics in Machine Learning, Neural
+                            Networks</li>
                     </ul>
                 </div>
                 <div class="bg-zinc-900 p-8 rounded-xl border-l-4 border-cyan-500 hover:bg-zinc-800 transition">
                     <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4 gap-2">
                         <div>
-                            <h3 class="text-2xl font-bold highlight-text">Bachelor of Technology in Computer Science</h3>
+                            <h3 class="text-2xl font-bold highlight-text">Bachelor of Technology in Computer Science
+                            </h3>
                             <p class="text-xl text-gray-300">Nirma University, Ahmedabad, India</p>
-                            <p class="text-lg text-gray-400 mt-2">PPI: <span class="highlight-text font-bold">8.4/10</span></p>
+                            <p class="text-lg text-gray-400 mt-2">PPI: <span
+                                    class="highlight-text font-bold">8.4/10</span></p>
                         </div>
                         <span class="text-gray-400 md:text-right whitespace-nowrap">Oct 2021 - May 2025</span>
                     </div>
                     <ul class="list-disc list-inside space-y-2 text-gray-300">
-                        <li>Relevant Coursework: Data Structures, Algorithms, Object Oriented Programming, Machine Learning, Deep Learning, Database Management Systems, Big Data, Microservices Architecture, Software Engineering</li>
+                        <li>Relevant Coursework: Data Structures, Algorithms, Object Oriented Programming, Machine
+                            Learning, Deep Learning, Database Management Systems, Big Data, Microservices Architecture,
+                            Software Engineering</li>
                     </ul>
                 </div>
             </div>
@@ -163,9 +239,11 @@
                     <i class="fas fa-code text-5xl highlight-text mb-4"></i>
                     <h3 class="text-2xl font-bold mb-4 highlight-text">Programming</h3>
                     <div class="space-y-2 text-gray-300">
-                        <span class="inline-block bg-zinc-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">JavaScript</span>
+                        <span
+                            class="inline-block bg-zinc-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">JavaScript</span>
                         <span class="inline-block bg-zinc-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">Python</span>
-                        <span class="inline-block bg-zinc-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">TypeScript</span>
+                        <span
+                            class="inline-block bg-zinc-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">TypeScript</span>
                         <span class="inline-block bg-zinc-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">Java</span>
                         <span class="inline-block bg-zinc-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">C++</span>
                         <span class="inline-block bg-zinc-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">C#</span>
@@ -176,23 +254,38 @@
                     <h3 class="text-2xl font-bold mb-4 highlight-text">AI/ML & Data</h3>
                     <div class="space-y-2 text-gray-300">
                         <span class="inline-block bg-zinc-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">PyTorch</span>
-                        <span class="inline-block bg-zinc-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">TensorFlow</span>
+                        <span
+                            class="inline-block bg-zinc-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">TensorFlow</span>
                         <span class="inline-block bg-zinc-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">Keras</span>
-                        <span class="inline-block bg-zinc-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">Scikit-learn</span>
+                        <span
+                            class="inline-block bg-zinc-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">Scikit-learn</span>
                         <span class="inline-block bg-zinc-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">LangChain</span>
                         <span class="inline-block bg-zinc-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">NLP</span>
-                        <span class="inline-block bg-zinc-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">Computer Vision</span>
+                        <span class="inline-block bg-zinc-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">Computer
+                            Vision</span>
                         <span class="inline-block bg-zinc-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">LLM</span>
                         <span class="inline-block bg-zinc-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">RAG</span>
-                        <span class="inline-block bg-zinc-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">Agentic AI</span>
+                        <span class="inline-block bg-zinc-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">Agentic
+                            AI</span>
                         <span class="inline-block bg-zinc-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">GenAI</span>
-                        <span class="inline-block bg-zinc-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">Deep Learning</span>
-                        <span class="inline-block bg-zinc-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">Reinforcement Learning</span>
-                        <span class="inline-block bg-zinc-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">Time Series</span>
-                        <span class="inline-block bg-zinc-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">Audio Processing</span>
-                        <span class="inline-block bg-zinc-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">Statistical Modeling</span>
-                        <span class="inline-block bg-zinc-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">Embeddings</span>
+                        <span class="inline-block bg-zinc-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">Deep
+                            Learning</span>
+                        <span class="inline-block bg-zinc-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">Reinforcement
+                            Learning</span>
+                        <span class="inline-block bg-zinc-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">Time
+                            Series</span>
+                        <span class="inline-block bg-zinc-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">Audio
+                            Processing</span>
+                        <span class="inline-block bg-zinc-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">Statistical
+                            Modeling</span>
+                        <span
+                            class="inline-block bg-zinc-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">Embeddings</span>
                         <span class="inline-block bg-zinc-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">VectorDB</span>
+                        <span class="inline-block bg-zinc-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">Machine
+                            Learning</span>
+                        <span class="inline-block bg-zinc-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">Pinecone</span>
+                        <span class="inline-block bg-zinc-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">Model Context
+                            Protocol</span>
                     </div>
                 </div>
                 <div class="bg-zinc-900 p-8 rounded-xl border border-zinc-800 card-hover">
@@ -208,12 +301,19 @@
                         <span class="inline-block bg-zinc-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">MongoDB</span>
                         <span class="inline-block bg-zinc-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">Docker</span>
                         <span class="inline-block bg-zinc-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">AWS</span>
-                        <span class="inline-block bg-zinc-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">AWS Redshift</span>
+                        <span class="inline-block bg-zinc-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">AWS
+                            Redshift</span>
                         <span class="inline-block bg-zinc-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">Spark</span>
                         <span class="inline-block bg-zinc-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">Hadoop</span>
                         <span class="inline-block bg-zinc-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">Git</span>
                         <span class="inline-block bg-zinc-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">GitHub</span>
-                        <span class="inline-block bg-zinc-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">GitHub Actions</span>
+                        <span class="inline-block bg-zinc-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">GitHub
+                            Actions</span>
+                        <span class="inline-block bg-zinc-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">Flask</span>
+                        <span class="inline-block bg-zinc-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">FastAPI</span>
+                        <span class="inline-block bg-zinc-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">Redis</span>
+                        <span class="inline-block bg-zinc-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">Jest</span>
+                        <span class="inline-block bg-zinc-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">pytest</span>
                     </div>
                 </div>
             </div>
@@ -234,8 +334,10 @@
                         <span class="text-gray-400 md:text-right whitespace-nowrap">Dec 2024 - May 2025</span>
                     </div>
                     <ul class="list-disc list-inside space-y-2 text-gray-300">
-                        <li>Expanded loan management platform from India, UK, and USA to UAE and Egypt by introducing new loan types and optimizing 50+ APIs, increasing potential user base by 15%</li>
-                        <li>Contributed to Athlete One platform migration by developing new backend APIs and optimizing existing endpoints, reducing average API response time by 45%</li>
+                        <li>Expanded loan management platform from India, UK, and USA to UAE and Egypt by introducing
+                            new loan types and optimizing 50+ APIs, increasing potential user base by 15%</li>
+                        <li>Contributed to Athlete One platform migration by developing new backend APIs and optimizing
+                            existing endpoints, reducing average API response time by 45%</li>
                     </ul>
                 </div>
                 <div class="bg-zinc-900 p-8 rounded-xl border-l-4 border-cyan-500 hover:bg-zinc-800 transition">
@@ -247,8 +349,10 @@
                         <span class="text-gray-400 md:text-right whitespace-nowrap">Jun 2024 - Aug 2024</span>
                     </div>
                     <ul class="list-disc list-inside space-y-2 text-gray-300">
-                        <li>Independently developed a responsive food delivery web application using ReactJS, Redux, and modern UI design principles</li>
-                        <li>Gained practical experience with Git and GitHub for version control, branching workflows, and collaborative code management</li>
+                        <li>Independently developed a responsive food delivery web application using ReactJS, Redux, and
+                            modern UI design principles</li>
+                        <li>Gained practical experience with Git and GitHub for version control, branching workflows,
+                            and collaborative code management</li>
                     </ul>
                 </div>
                 <div class="bg-zinc-900 p-8 rounded-xl border-l-4 border-cyan-500 hover:bg-zinc-800 transition">
@@ -260,7 +364,8 @@
                         <span class="text-gray-400 md:text-right whitespace-nowrap">Sep 2023 - Nov 2024</span>
                     </div>
                     <ul class="list-disc list-inside space-y-2 text-gray-300">
-                        <li>Led a team of 40+ members and directed 3 hackathons and 10+ expert events, engaging over 1000+ participants</li>
+                        <li>Led a team of 40+ members and directed 3 hackathons and 10+ expert events, engaging over
+                            1000+ participants</li>
                         <li>Oversaw development of the CSI Hackathon website and ensured timely launch</li>
                         <li>Collaborated with multiple teams to ensure smooth flow of events</li>
                     </ul>
@@ -274,10 +379,12 @@
         <div class="max-w-7xl mx-auto">
             <h2 class="text-5xl font-bold mb-12 text-center">Featured <span class="highlight-text">Projects</span></h2>
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-zinc-900 rounded-xl overflow-hidden border border-zinc-800 hover:border-cyan-500 transition hover:scale-105 transform">
+                <div
+                    class="bg-zinc-900 rounded-xl overflow-hidden border border-zinc-800 hover:border-cyan-500 transition hover:scale-105 transform">
                     <div class="p-6">
                         <h3 class="text-2xl font-bold mb-2 highlight-text">Database Copilot (Agentic AI)</h3>
-                        <p class="text-gray-300 mb-4">AI agent that interprets natural-language prompts and executes database operations autonomously, reducing manual query effort by 60%.</p>
+                        <p class="text-gray-300 mb-4">AI agent that interprets natural-language prompts and executes
+                            database operations autonomously, reducing manual query effort by 60%.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="bg-zinc-800 px-3 py-1 rounded-full text-sm">Next.js</span>
                             <span class="bg-zinc-800 px-3 py-1 rounded-full text-sm">LangChain</span>
@@ -286,14 +393,18 @@
                             <span class="bg-zinc-800 px-3 py-1 rounded-full text-sm">FastAPI</span>
                         </div>
                         <div class="flex space-x-4">
-                            <a href="https://github.com/MulyaP/Database-Copilot" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-cyan-400"><i class="fab fa-github"></i> Code</a>
+                            <a href="https://github.com/MulyaP/Database-Copilot" target="_blank"
+                                rel="noopener noreferrer" class="text-gray-400 hover:text-cyan-400"><i
+                                    class="fab fa-github"></i> Code</a>
                         </div>
                     </div>
                 </div>
-                <div class="bg-zinc-900 rounded-xl overflow-hidden border border-zinc-800 hover:border-cyan-500 transition hover:scale-105 transform">
+                <div
+                    class="bg-zinc-900 rounded-xl overflow-hidden border border-zinc-800 hover:border-cyan-500 transition hover:scale-105 transform">
                     <div class="p-6">
                         <h3 class="text-2xl font-bold mb-2 highlight-text">VibeDish (AI + Full Stack)</h3>
-                        <p class="text-gray-300 mb-4">AI-driven recommendation engine mapping music signals to food preferences with FastAPI backend and S3-backed CDN. 81% test coverage.</p>
+                        <p class="text-gray-300 mb-4">AI-driven recommendation engine mapping music signals to food
+                            preferences with FastAPI backend and S3-backed CDN. 81% test coverage.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="bg-zinc-800 px-3 py-1 rounded-full text-sm">FastAPI</span>
                             <span class="bg-zinc-800 px-3 py-1 rounded-full text-sm">AWS S3</span>
@@ -301,14 +412,18 @@
                             <span class="bg-zinc-800 px-3 py-1 rounded-full text-sm">NextJs</span>
                         </div>
                         <div class="flex space-x-4">
-                            <a href="https://github.com/MulyaP/VibeDish-Project-3" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-cyan-400"><i class="fab fa-github"></i> Code</a>
+                            <a href="https://github.com/MulyaP/VibeDish-Project-3" target="_blank"
+                                rel="noopener noreferrer" class="text-gray-400 hover:text-cyan-400"><i
+                                    class="fab fa-github"></i> Code</a>
                         </div>
                     </div>
                 </div>
-                <div class="bg-zinc-900 rounded-xl overflow-hidden border border-zinc-800 hover:border-cyan-500 transition hover:scale-105 transform">
+                <div
+                    class="bg-zinc-900 rounded-xl overflow-hidden border border-zinc-800 hover:border-cyan-500 transition hover:scale-105 transform">
                     <div class="p-6">
                         <h3 class="text-2xl font-bold mb-2 highlight-text">Advance Loan Management System</h3>
-                        <p class="text-gray-300 mb-4">Enhanced platform serving 3+ regions. Improved onboarding flexibility by 30% and reduced dashboard load time by ~25%.</p>
+                        <p class="text-gray-300 mb-4">Enhanced platform serving 3+ regions. Improved onboarding
+                            flexibility by 30% and reduced dashboard load time by ~25%.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="bg-zinc-800 px-3 py-1 rounded-full text-sm">Angular</span>
                             <span class="bg-zinc-800 px-3 py-1 rounded-full text-sm">.NET</span>
@@ -317,14 +432,16 @@
                         </div>
                     </div>
                 </div>
-                
+
             </div>
-            
+
             <div class="grid md:grid-cols-3 gap-8 mt-8">
-                <div class="bg-zinc-900 rounded-xl overflow-hidden border border-zinc-800 hover:border-cyan-500 transition hover:scale-105 transform">
+                <div
+                    class="bg-zinc-900 rounded-xl overflow-hidden border border-zinc-800 hover:border-cyan-500 transition hover:scale-105 transform">
                     <div class="p-6">
                         <h3 class="text-2xl font-bold highlight-text">Indian Music Genre Prediction</h3>
-                        <p class="text-gray-300 mb-4">Deep learning model trained on 75GB custom dataset. Achieved 79% accuracy using ResNet101, outperforming baseline by ~15%.</p>
+                        <p class="text-gray-300 mb-4">Deep learning model trained on 75GB custom dataset. Achieved 79%
+                            accuracy using ResNet101, outperforming baseline by ~15%.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="bg-zinc-800 px-3 py-1 rounded-full text-sm">PyTorch</span>
                             <span class="bg-zinc-800 px-3 py-1 rounded-full text-sm">ResNet101</span>
@@ -332,14 +449,18 @@
                             <span class="bg-zinc-800 px-3 py-1 rounded-full text-sm">Audio ML</span>
                         </div>
                         <div class="flex space-x-4">
-                            <a href="https://www.kaggle.com/code/mulyapatel/indian-music-genre-prediction-mel" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-cyan-400"><i class="fas fa-external-link-alt"></i> Notebook</a>
+                            <a href="https://www.kaggle.com/code/mulyapatel/indian-music-genre-prediction-mel"
+                                target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-cyan-400"><i
+                                    class="fas fa-external-link-alt"></i> Notebook</a>
                         </div>
                     </div>
                 </div>
-                <div class="bg-zinc-900 rounded-xl overflow-hidden border border-zinc-800 hover:border-cyan-500 transition hover:scale-105 transform">
+                <div
+                    class="bg-zinc-900 rounded-xl overflow-hidden border border-zinc-800 hover:border-cyan-500 transition hover:scale-105 transform">
                     <div class="p-6">
                         <h3 class="text-2xl font-bold mb-2 highlight-text">Stock Trend Prediction (LSTM)</h3>
-                        <p class="text-gray-300 mb-4">Achieved ~99.6% accuracy (R²) with custom LSTM weight-averaging optimization. 96.3% trend classification accuracy.</p>
+                        <p class="text-gray-300 mb-4">Achieved ~99.6% accuracy (R²) with custom LSTM weight-averaging
+                            optimization. 96.3% trend classification accuracy.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="bg-zinc-800 px-3 py-1 rounded-full text-sm">LSTM</span>
                             <span class="bg-zinc-800 px-3 py-1 rounded-full text-sm">Transformer</span>
@@ -347,15 +468,19 @@
                             <span class="bg-zinc-800 px-3 py-1 rounded-full text-sm">Attention Mechanism</span>
                         </div>
                         <div class="flex space-x-4">
-                            <a href="https://github.com/MulyaP/Stock-Trend-Prediction" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-cyan-400"><i class="fab fa-github"></i> Code</a>
+                            <a href="https://github.com/MulyaP/Stock-Trend-Prediction" target="_blank"
+                                rel="noopener noreferrer" class="text-gray-400 hover:text-cyan-400"><i
+                                    class="fab fa-github"></i> Code</a>
                         </div>
                     </div>
                 </div>
 
-                <div class="bg-zinc-900 rounded-xl overflow-hidden border border-zinc-800 hover:border-cyan-500 transition hover:scale-105 transform">
+                <div
+                    class="bg-zinc-900 rounded-xl overflow-hidden border border-zinc-800 hover:border-cyan-500 transition hover:scale-105 transform">
                     <div class="p-6">
                         <h3 class="text-2xl font-bold mb-2 highlight-text">MERN Food Delivery App</h3>
-                        <p class="text-gray-300 mb-4">Full-stack food delivery application with authentication, cart functionality, and optimized state management using useReducer.</p>
+                        <p class="text-gray-300 mb-4">Full-stack food delivery application with authentication, cart
+                            functionality, and optimized state management using useReducer.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="bg-zinc-800 px-3 py-1 rounded-full text-sm">MongoDB</span>
                             <span class="bg-zinc-800 px-3 py-1 rounded-full text-sm">Express</span>
@@ -363,7 +488,81 @@
                             <span class="bg-zinc-800 px-3 py-1 rounded-full text-sm">Node.js</span>
                         </div>
                         <div class="flex space-x-4">
-                            <a href="https://github.com/MulyaP/MERN-Stack-Food-Delivery-app" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-cyan-400"><i class="fab fa-github"></i> Code</a>
+                            <a href="https://github.com/MulyaP/MERN-Stack-Food-Delivery-app" target="_blank"
+                                rel="noopener noreferrer" class="text-gray-400 hover:text-cyan-400"><i
+                                    class="fab fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 mt-8">
+                <div
+                    class="bg-zinc-900 rounded-xl overflow-hidden border border-zinc-800 hover:border-cyan-500 transition hover:scale-105 transform">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2 highlight-text">Google Workspace MCP Server</h3>
+                        <p class="text-gray-300 mb-4">MCP server exposing 20+ typed tools across Gmail, Calendar, Drive,
+                            Docs, and Sheets — enabling LLM agents to automate multi-step workflows like email triage,
+                            document generation, and calendar scheduling via natural language. Integrates natively with
+                            Claude Desktop & Claude Code.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-zinc-800 px-3 py-1 rounded-full text-sm">MCP</span>
+                            <span class="bg-zinc-800 px-3 py-1 rounded-full text-sm">Agentic AI</span>
+                            <span class="bg-zinc-800 px-3 py-1 rounded-full text-sm">Google APIs</span>
+                            <span class="bg-zinc-800 px-3 py-1 rounded-full text-sm">LLM</span>
+                            <span class="bg-zinc-800 px-3 py-1 rounded-full text-sm">JSON Schema</span>
+                            <span class="bg-zinc-800 px-3 py-1 rounded-full text-sm">Python</span>
+                        </div>
+                        <!-- <div class="flex space-x-4">
+                            <a href="https://github.com/MulyaP" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-cyan-400"><i class="fab fa-github"></i> Code</a>
+                        </div> -->
+                    </div>
+                </div>
+
+                <div
+                    class="bg-zinc-900 rounded-xl overflow-hidden border border-zinc-800 hover:border-cyan-500 transition hover:scale-105 transform">
+                    <div class="p-6">
+                        <div class="flex items-center gap-3 mb-2">
+                            <h3 class="text-2xl font-bold highlight-text">Disaster Damage Detection (Geo-spatial CV)
+                            </h3>
+                            <span
+                                class="inline-block bg-indigo-600/30 border border-indigo-500 text-indigo-300 text-xs font-semibold px-2 py-0.5 rounded-full whitespace-nowrap">In
+                                Progress</span>
+                        </div>
+                        <p class="text-gray-300 mb-4">Label-efficient damage assessment pipeline on the xBD dataset
+                            using a Vision Transformer (ViT) using weights of fine-tuned foundational models. Transfers
+                            foundational model weights into a Siamese ViT architecture that analyzes pre- and
+                            post-disaster image pairs across optical and SAR modalities for building-level damage
+                            classification.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-zinc-800 px-3 py-1 rounded-full text-sm">Vision Transformer</span>
+                            <span class="bg-zinc-800 px-3 py-1 rounded-full text-sm">MIM</span>
+                            <span class="bg-zinc-800 px-3 py-1 rounded-full text-sm">Siamese Network</span>
+                            <span class="bg-zinc-800 px-3 py-1 rounded-full text-sm">SAR Imagery</span>
+                            <span class="bg-zinc-800 px-3 py-1 rounded-full text-sm">PyTorch</span>
+                            <span class="bg-zinc-800 px-3 py-1 rounded-full text-sm">xBD Dataset</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-zinc-900 rounded-xl overflow-hidden border border-zinc-800 hover:border-cyan-500 transition hover:scale-105 transform">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2 highlight-text">Text Summarization Model (LSTM)</h3>
+                        <p class="text-gray-300 mb-4">Seq2Seq text summarization model trained on the Amazon Fine Food
+                            Reviews dataset using LSTM networks with an Attention mechanism. Leverages embedding layers
+                            and tokenization to generate concise, abstractive summaries.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-zinc-800 px-3 py-1 rounded-full text-sm">LSTM</span>
+                            <span class="bg-zinc-800 px-3 py-1 rounded-full text-sm">Attention Mechanism</span>
+                            <span class="bg-zinc-800 px-3 py-1 rounded-full text-sm">Keras</span>
+                            <span class="bg-zinc-800 px-3 py-1 rounded-full text-sm">NLP</span>
+                            <span class="bg-zinc-800 px-3 py-1 rounded-full text-sm">Seq2Seq</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <a href="https://github.com/MulyaP/Text-Summarization" target="_blank"
+                                rel="noopener noreferrer" class="text-gray-400 hover:text-cyan-400"><i
+                                    class="fab fa-github"></i> Code</a>
                         </div>
                     </div>
                 </div>
@@ -376,22 +575,26 @@
         <div class="max-w-7xl mx-auto">
             <h2 class="text-5xl font-bold mb-12 text-center">Beyond <span class="highlight-text">Code</span></h2>
             <div class="grid md:grid-cols-4 gap-6">
-                <div class="bg-zinc-900 p-6 rounded-xl border border-zinc-800 text-center hover:scale-105 transition card-hover">
+                <div
+                    class="bg-zinc-900 p-6 rounded-xl border border-zinc-800 text-center hover:scale-105 transition card-hover">
                     <i class="fas fa-futbol text-5xl highlight-text mb-4"></i>
                     <h3 class="text-xl font-bold">Soccer</h3>
                     <p class="text-gray-300 mt-2">Playing and watching matches</p>
                 </div>
-                <div class="bg-zinc-900 p-6 rounded-xl border border-zinc-800 text-center hover:scale-105 transition card-hover">
+                <div
+                    class="bg-zinc-900 p-6 rounded-xl border border-zinc-800 text-center hover:scale-105 transition card-hover">
                     <i class="fas fa-dumbbell text-5xl highlight-text mb-4"></i>
                     <h3 class="text-xl font-bold">Working Out</h3>
                     <p class="text-gray-300 mt-2">Fitness and strength training</p>
                 </div>
-                <div class="bg-zinc-900 p-6 rounded-xl border border-zinc-800 text-center hover:scale-105 transition card-hover">
+                <div
+                    class="bg-zinc-900 p-6 rounded-xl border border-zinc-800 text-center hover:scale-105 transition card-hover">
                     <i class="fas fa-hiking text-5xl highlight-text mb-4"></i>
                     <h3 class="text-xl font-bold">Hiking</h3>
                     <p class="text-gray-300 mt-2">Exploring nature trails</p>
                 </div>
-                <div class="bg-zinc-900 p-6 rounded-xl border border-zinc-800 text-center hover:scale-105 transition card-hover">
+                <div
+                    class="bg-zinc-900 p-6 rounded-xl border border-zinc-800 text-center hover:scale-105 transition card-hover">
                     <i class="fas fa-gamepad text-5xl highlight-text mb-4"></i>
                     <h3 class="text-xl font-bold">Gaming</h3>
                     <p class="text-gray-300 mt-2">Strategy and competitive gaming</p>
@@ -404,12 +607,14 @@
     <section id="contact" class="py-20 px-6 scroll-reveal">
         <div class="max-w-4xl mx-auto text-center">
             <h2 class="text-5xl font-bold mb-6">Let's <span class="highlight-text">Connect</span></h2>
-            <p class="text-xl text-gray-300 mb-12">I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.</p>
+            <p class="text-xl text-gray-300 mb-12">I'm always open to discussing new projects, creative ideas, or
+                opportunities to be part of your vision.</p>
             <div class="grid md:grid-cols-3 gap-8 mb-12">
                 <div class="bg-zinc-900 p-6 rounded-xl border border-zinc-800 card-hover">
                     <i class="fas fa-envelope text-4xl highlight-text mb-4"></i>
                     <h3 class="text-xl font-bold mb-2">Email</h3>
-                    <a href="mailto:patel.mulya@gmail.com" class="text-gray-400 hover:text-white">patel.mulya@gmail.com</a>
+                    <a href="mailto:patel.mulya@gmail.com"
+                        class="text-gray-400 hover:text-white">patel.mulya@gmail.com</a>
                 </div>
                 <div class="bg-zinc-900 p-6 rounded-xl border border-zinc-800 card-hover">
                     <i class="fas fa-phone text-4xl highlight-text mb-4"></i>
@@ -423,10 +628,14 @@
                 </div>
             </div>
             <div class="flex justify-center space-x-6 text-3xl">
-                <a href="https://github.com/MulyaP" target="_blank" rel="noopener noreferrer" class="hover:text-gray-400 transition"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/mulya-patel-645069250/" target="_blank" rel="noopener noreferrer" class="hover:text-gray-400 transition"><i class="fab fa-linkedin"></i></a>
-                <a href="https://codeforces.com/profile/Mulya_patel" target="_blank" rel="noopener noreferrer" class="hover:text-gray-400 transition"><i class="fas fa-code"></i></a>
-                <a href="mailto:patel.mulya@gmail.com" target="_blank" rel="noopener noreferrer" class="hover:text-gray-400 transition"><i class="fas fa-envelope"></i></a>
+                <a href="https://github.com/MulyaP" target="_blank" rel="noopener noreferrer"
+                    class="hover:text-gray-400 transition"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/mulya-patel-645069250/" target="_blank" rel="noopener noreferrer"
+                    class="hover:text-gray-400 transition"><i class="fab fa-linkedin"></i></a>
+                <a href="https://codeforces.com/profile/Mulya_patel" target="_blank" rel="noopener noreferrer"
+                    class="hover:text-gray-400 transition"><i class="fas fa-code"></i></a>
+                <a href="mailto:patel.mulya@gmail.com" target="_blank" rel="noopener noreferrer"
+                    class="hover:text-gray-400 transition"><i class="fas fa-envelope"></i></a>
             </div>
         </div>
     </section>
@@ -484,12 +693,12 @@
         const canvas = document.getElementById('networkCanvas');
         const ctx = canvas.getContext('2d');
         let particles = [];
-        
+
         function resizeCanvas() {
             canvas.width = window.innerWidth;
             canvas.height = document.body.scrollHeight;
         }
-        
+
         class Particle {
             constructor() {
                 this.x = Math.random() * canvas.width;
@@ -498,15 +707,15 @@
                 this.vy = (Math.random() - 0.5) * 0.5;
                 this.radius = Math.random() * 2 + 1;
             }
-            
+
             update() {
                 this.x += this.vx;
                 this.y += this.vy;
-                
+
                 if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
                 if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
             }
-            
+
             draw() {
                 ctx.fillStyle = 'rgba(6, 182, 212, 0.5)';
                 ctx.beginPath();
@@ -514,7 +723,7 @@
                 ctx.fill();
             }
         }
-        
+
         function init() {
             resizeCanvas();
             particles = [];
@@ -523,14 +732,14 @@
                 particles.push(new Particle());
             }
         }
-        
+
         function connectParticles() {
             for (let i = 0; i < particles.length; i++) {
                 for (let j = i + 1; j < particles.length; j++) {
                     const dx = particles[i].x - particles[j].x;
                     const dy = particles[i].y - particles[j].y;
                     const distance = Math.sqrt(dx * dx + dy * dy);
-                    
+
                     if (distance < 150) {
                         ctx.strokeStyle = `rgba(6, 182, 212, ${0.2 * (1 - distance / 150)})`;
                         ctx.lineWidth = 1;
@@ -542,30 +751,31 @@
                 }
             }
         }
-        
+
         function animate() {
             ctx.fillStyle = 'rgba(9, 9, 11, 0.05)';
             ctx.fillRect(0, 0, canvas.width, canvas.height);
-            
+
             particles.forEach(particle => {
                 particle.update();
                 particle.draw();
             });
-            
+
             connectParticles();
             requestAnimationFrame(animate);
         }
-        
+
         window.addEventListener('resize', () => {
             resizeCanvas();
         });
-        
+
         window.addEventListener('scroll', () => {
             canvas.height = document.body.scrollHeight;
         });
-        
+
         init();
         animate();
     </script>
 </body>
+
 </html>
