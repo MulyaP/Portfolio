@@ -1210,9 +1210,10 @@
                                 <span class="badge-wip">In Progress</span>
                             </div>
                         </div>
-                        <h3 style="font-size: 1rem; font-weight: 700; color: #f4f4f5; margin-bottom: 8px;">Disaster Damage Detection</h3>
-                        <p style="color: #71717a; font-size: 0.87rem; line-height: 1.7; margin-bottom: 16px; flex: 1;">Label-efficient damage assessment pipeline on the xBD dataset using a Vision Transformer (ViT). Siamese architecture analyzes pre/post-disaster image pairs across optical and SAR modalities for building-level damage classification.</p>
+                        <h3 style="font-size: 1rem; font-weight: 700; color: #f4f4f5; margin-bottom: 8px;">Label-Efficient Disaster Damage Detection</h3>
+                        <p style="color: #71717a; font-size: 0.87rem; line-height: 1.7; margin-bottom: 16px; flex: 1;">Benchmarked SOTA foundational models for building localization on the xBD dataset; best results with DeepLabV3+ achieving 78% IoU and 88% Dice score. Transferring pretrained weights into a Siamese/comparative ViT architecture for change detection, classifying building-level damage across optical and SAR modalities.</p>
                         <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+                            <span class="tech-tag">DeepLabV3+</span>
                             <span class="tech-tag">Vision Transformer</span>
                             <span class="tech-tag">Siamese Network</span>
                             <span class="tech-tag">SAR Imagery</span>
@@ -1221,28 +1222,30 @@
                     </div>
                 </div>
 
-                <!-- 9: Text Summarization -->
+                <!-- 9: PolicyBot -->
                 <div class="project-card" data-category="aiml">
                     <div class="project-card-bar"></div>
                     <div style="padding: 22px; display: flex; flex-direction: column; flex: 1;">
                         <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 14px;">
                             <div style="display: flex; gap: 6px; flex-wrap: wrap;">
                                 <span class="badge-ai">AI/ML</span>
+                                <span class="badge-agent">Agentic AI</span>
                             </div>
-                            <a href="https://github.com/MulyaP/Text-Summarization" target="_blank" rel="noopener noreferrer"
+                            <a href="https://github.com/MulyaP/PolicyBot" target="_blank" rel="noopener noreferrer"
                                style="color: #52525b; font-size: 1.1rem; text-decoration: none; transition: color 0.2s;"
                                onmouseover="this.style.color='#f4f4f5';" onmouseout="this.style.color='#52525b';">
                                 <i class="fab fa-github"></i>
                             </a>
                         </div>
-                        <h3 style="font-size: 1rem; font-weight: 700; color: #f4f4f5; margin-bottom: 8px;">Text Summarization Model</h3>
-                        <p style="color: #71717a; font-size: 0.87rem; line-height: 1.7; margin-bottom: 16px; flex: 1;">Seq2Seq text summarization using LSTM + Attention on Amazon Fine Food Reviews dataset. Generates concise, abstractive summaries via embedding layers and tokenization.</p>
+                        <h3 style="font-size: 1rem; font-weight: 700; color: #f4f4f5; margin-bottom: 8px;">PolicyBot — AI-Powered HR/IT Slack Agent</h3>
+                        <p style="color: #71717a; font-size: 0.87rem; line-height: 1.7; margin-bottom: 16px; flex: 1;">ReAct-style agent loop on Slack resolving ~80% of employee HR/IT queries autonomously, cutting HR response times by ~60%. RAG pipeline (HuggingFace embeddings + ChromaDB) achieves 90%+ retrieval accuracy on policy documents with citation-grounded responses. Deployed as a containerized FastAPI microservice with ~800ms median response time.</p>
                         <div style="display: flex; flex-wrap: wrap; gap: 6px;">
-                            <span class="tech-tag">LSTM</span>
-                            <span class="tech-tag">Attention</span>
-                            <span class="tech-tag">Keras</span>
-                            <span class="tech-tag">NLP</span>
-                            <span class="tech-tag">Seq2Seq</span>
+                            <span class="tech-tag">ReAct</span>
+                            <span class="tech-tag">RAG</span>
+                            <span class="tech-tag">ChromaDB</span>
+                            <span class="tech-tag">FastAPI</span>
+                            <span class="tech-tag">Slack API</span>
+                            <span class="tech-tag">Docker</span>
                         </div>
                     </div>
                 </div>
